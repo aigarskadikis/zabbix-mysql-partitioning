@@ -1,7 +1,13 @@
 #!/bin/bash
-# (auth is in ~/.my.cnf)
 
-command="CALL partition_maintenance_all('zabbix');"
+# Specify database name
+DATABASE=zabbix
 
-# perform partition maintenance to drop all rolloff data
-mysql zabbix -e "$command"
+# SQL command to maintain partitions
+SQLCOMMAND="CALL partition_maintenance_all(\"$DATABASE\");"
+
+# Drop old and create new partitions
+mysql \
+--defaults-file=/etc/zabbix/zabbix_partitioning.cnf \
+--database="$DATABASE" \
+--execute="$SQLCOMMAND"

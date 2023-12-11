@@ -1,0 +1,12 @@
+DROP USER IF EXISTS 'zbx_part'@'127.0.0.1';
+CREATE USER 'zbx_part'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY 'ZHYImQ65nXJ8z9knwRXlIj0x';
+GRANT SELECT, ALTER, DROP ON zabbix.history TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT, ALTER, DROP ON zabbix.history_uint TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT, ALTER, DROP ON zabbix.history_str TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT, ALTER, DROP ON zabbix.history_text TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT, ALTER, DROP ON zabbix.history_log TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT, ALTER, DROP ON zabbix.trends TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT, ALTER, DROP ON zabbix.trends_uint TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT ON zabbix.dbversion TO 'zbx_part'@'127.0.0.1';
+GRANT SELECT,DELETE ON zabbix.housekeeper TO 'zbx_part'@'127.0.0.1';
+FLUSH PRIVILEGES;
