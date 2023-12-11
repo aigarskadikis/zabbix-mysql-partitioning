@@ -1,6 +1,4 @@
-# zabbix-partitioning-mysql-stored-procedures
-Create and maintain DB table partitions
-
+# Create and maintain DB table partitions
  
 This is tested and works with:
 
@@ -9,26 +7,17 @@ This is tested and works with:
 * MariaDB 10.5
 
 
-## download project for offline use
+## Download project for offline use
 ```
 dnf -y install git
-git clone
+cd
+gh repo clone aigarskadikis/zabbix-partitioning-mysql-stored-procedures
 ```
 
 
-## Install script
+## Install script and cronjob
+```
+cd zabbix-partitioning-mysql-stored-procedures
+cp -r * /
 ```
 
-```
-
-
-## Allow to launch script on-demand
-```
-
-```
-
-
-## Install cronjob
-```
-
-```
