@@ -16,3 +16,4 @@ GRANT SELECT, ALTER, DROP ON zabbix.trends_uint TO 'zbx_part'@'127.0.0.1';
 GRANT SELECT ON zabbix.dbversion TO 'zbx_part'@'127.0.0.1';
 GRANT SELECT,DELETE ON zabbix.housekeeper TO 'zbx_part'@'127.0.0.1';
 FLUSH PRIVILEGES;
+
