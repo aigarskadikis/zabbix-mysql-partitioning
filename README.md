@@ -11,13 +11,17 @@ This is tested and works with:
 ```
 dnf -y install git
 cd
-gh repo clone aigarskadikis/zabbix-partitioning-mysql-stored-procedures
+git clone https://github.com/aigarskadikis/zabbix-partitioning-mysql-stored-procedures.git
 ```
 
-
-## Install script and cronjob
+## Navigate to project directory
 ```
 cd zabbix-partitioning-mysql-stored-procedures
-cp -r * /
+```
+
+## Install script and set it executable
+```
+cp usr/local/bin/zabbix_partitioning.sh /usr/local/bin
+chmod +x /usr/local/bin/zabbix_partitioning.
 ```
 
